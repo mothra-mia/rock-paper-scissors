@@ -1,0 +1,79 @@
+:root {
+	font-family: sans-serif;
+	--gradient: linear-gradient(
+		45deg,
+		#fff5f3,
+		#c9f3f5,
+		#ffeafa);
+}
+
+body {
+	padding-top: 30px;
+}
+
+.main-box {
+	display: flex;
+	max-width: 600px;
+    margin: auto;
+	background-image: var(--gradient);
+	background-size:300%;
+	flex-direction: column;
+	padding: 15px;
+	box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+	border-radius: 5px;
+	animation: bg-animation 5s infinite alternate;
+}
+
+@keyframes bg-animation {
+	0% {background-position: left}
+	100% {background-position: right}
+}
+
+h1 {
+	text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+h2 {
+	text-align: center;
+	font-weight:100;
+}
+
+h3 {
+	text-align: center;
+	font-weight: 100;
+}
+
+.signs-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.sign-box {
+	padding: 15px;
+	width: 8rem;
+	background: #5d5d5d;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.5s,box-shadow 0.5s;
+}
+
+.sign-box:hover {
+	background-color: #000;
+	box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+	
+}
+
+.sign-box h2 {
+	text-transform: uppercase;
+	color: #fff;
+}
+
+@media (max-width: 550px) {
+	.signs-box {
+		flex-direction: column;
+	}
+}
